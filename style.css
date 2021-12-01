@@ -28,6 +28,40 @@ header nav ul {
     font-weight: bold;
 }
 
+header a {
+    position: relative;
+    display: block;
+    padding: 5px;
+}
+
+header a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #f44611, #fff);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+header a:hover::before {
+    transform: scaleX(1);
+}
+
+header[data-animation="bonus"] a::before {
+    transform-origin: right;
+}
+
+header[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
 .Prendas {
     display: flex;
     flex-direction: row;
@@ -80,14 +114,6 @@ a {
     padding: 20px;
     text-align: center;
     font-size: 30px;
-}
-
-footer {
-    background-color: #125975;
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-    color: white;
 }
 
 
@@ -199,7 +225,7 @@ blockquote span {
 }
 
 .cd-slider li.current_slide .content {
-    opacity: 1;
+    opacity: 30;
     transform: scale(1);
 }
 
@@ -304,12 +330,11 @@ nav>div>span {
 }
 
 svg {
-    background-color: yellow;
-    font: 9.5em 'Montserrat';
+    font: 7rem 'Montserrat';
     width: 610px;
     height: 180px;
     margin-top: -33px;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .text-copy {
@@ -378,3 +403,11 @@ svg {
 
 
 /* final paralax2 */
+
+footer {
+    background-color: #125975;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    color: white;
+}
