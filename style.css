@@ -380,30 +380,6 @@ svg {
 
 /* FINAL PARALAX */
 
-
-/* inicio paralax2 */
-
-.paralax2 {
-    background-image: url("https://lh3.googleusercontent.com/proxy/z_1tBIDOCWa3ER6MtFogkiEoq_KmfuN_fV2vZwKLpHi-kq3LUl7Qq79yr_CN564ZsWrBVPBMgdG-XSmayCKwcKRj6FoeOsku8CucslQ");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    color: #fff;
-    margin-top: 3%;
-    padding: 150px;
-}
-
-.paralax2 p {
-    text-align: center;
-    font-size: 200%;
-    color: black;
-    background-color: rgba(255, 248, 220, 0.158);
-}
-
-
-/* final paralax2 */
-
 footer {
     background-color: #125975;
     text-align: center;

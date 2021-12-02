@@ -1,0 +1,67 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    margin: 0px;
+    background-color: white;
+}
+
+.titulo {
+    font-family: 'Kaushan Script', cursive;
+    color: #fff;
+    text-shadow: #07222c 4px 5px 8px;
+}
+
+header {
+    padding: 10px 15% 10px 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #125975;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header a {
+    position: relative;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+    text-shadow: #07222c 4px 5px 8px;
+    color: #fff;
+}
+
+header a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #f44611, #fff);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+header a:hover::before {
+    transform: scaleX(1);
+}
+
+header[data-animation="bonus"] a::before {
+    transform-origin: right;
+}
+
+header[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
